@@ -1,0 +1,12 @@
+ 
+ OOPS Concepts:
+
+1. Inheritance:
+            - The Phenomeon of deriving the properties from one class to another class.
+
+
+                   Class 1
+                      |
+                   Class 2
+
+
