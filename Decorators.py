@@ -2,6 +2,10 @@
 #! Decorators
 
 #* Decorators are functions that are used to modify the behaviour of other functions.
+#* Decorators are used to add additional functionality to a function without modifying the function itself.
+#* Decorators are used in the concept of nested function.where outer function will accept one argument i.e main function address abd perform the task without affecting the main function.
+#* Decorators are also called as meta programming.
+#~ Reason: bcz a part of a program tries to modify another part of the program.
 
 # def outer(func): #func=main address
 #     def inner():
@@ -35,13 +39,17 @@
 
 
 #! write a program to pass positional arg, keyword arg and print both positional and keyword arg.but before that print the length of positional arg.
-
+import time
 def check(func): #func = main address
     def inner(*args,**kwargs):
+        st = time.time()
         print("length of positional argument")
         print(len(args)) # 2
+        # time.sleep(1) 
         func(*args,**kwargs) # main((49,50),{a=10,b=20})
         print("operation completed")
+        end=time.time()
+        print(end-st)
     return inner
 
 @check 
